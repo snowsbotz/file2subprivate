@@ -1,0 +1,1080 @@
+[
+    {
+        "label": "pymongo,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pymongo.",
+        "description": "pymongo.",
+        "detail": "pymongo.",
+        "documentation": {}
+    },
+    {
+        "label": "DB_URI",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DB_NAME",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "OWNER_ID",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "ADMINS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "CHANNEL_ID",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DISABLE_CHANNEL_BUTTON",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "ADMINS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "ADMINS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "OWNER_ID",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "FORCE_MSG",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "START_MSG",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "CUSTOM_CAPTION",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DISABLE_CHANNEL_BUTTON",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "PROTECT_CONTENT",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "ADMINS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "BOT_STATS_TEXT",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "USER_REPLY_TEXT",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "API_HASH",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "APP_ID",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "LOGGER",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "TG_BOT_TOKEN",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "TG_BOT_WORKERS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "FORCE_SUB_CHANNEL",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "FORCE_SUB_CHANNEL2",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "CHANNEL_ID",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "PORT",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "FORCE_SUB_CHANNEL",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "FORCE_SUB_CHANNEL2",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "ADMINS",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "__version__",
+        "importPath": "pyrogram",
+        "description": "pyrogram",
+        "isExtraImport": true,
+        "detail": "pyrogram",
+        "documentation": {}
+    },
+    {
+        "label": "filters",
+        "importPath": "pyrogram",
+        "description": "pyrogram",
+        "isExtraImport": true,
+        "detail": "pyrogram",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "pyrogram",
+        "description": "pyrogram",
+        "isExtraImport": true,
+        "detail": "pyrogram",
+        "documentation": {}
+    },
+    {
+        "label": "filters",
+        "importPath": "pyrogram",
+        "description": "pyrogram",
+        "isExtraImport": true,
+        "detail": "pyrogram",
+        "documentation": {}
+    },
+    {
+        "label": "enums",
+        "importPath": "pyrogram",
+        "description": "pyrogram",
+        "isExtraImport": true,
+        "detail": "pyrogram",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "pyrogram",
+        "description": "pyrogram",
+        "isExtraImport": true,
+        "detail": "pyrogram",
+        "documentation": {}
+    },
+    {
+        "label": "filters",
+        "importPath": "pyrogram",
+        "description": "pyrogram",
+        "isExtraImport": true,
+        "detail": "pyrogram",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "pyrogram",
+        "description": "pyrogram",
+        "isExtraImport": true,
+        "detail": "pyrogram",
+        "documentation": {}
+    },
+    {
+        "label": "filters",
+        "importPath": "pyrogram",
+        "description": "pyrogram",
+        "isExtraImport": true,
+        "detail": "pyrogram",
+        "documentation": {}
+    },
+    {
+        "label": "__version__",
+        "importPath": "pyrogram",
+        "description": "pyrogram",
+        "isExtraImport": true,
+        "detail": "pyrogram",
+        "documentation": {}
+    },
+    {
+        "label": "filters",
+        "importPath": "pyrogram",
+        "description": "pyrogram",
+        "isExtraImport": true,
+        "detail": "pyrogram",
+        "documentation": {}
+    },
+    {
+        "label": "Client",
+        "importPath": "pyrogram",
+        "description": "pyrogram",
+        "isExtraImport": true,
+        "detail": "pyrogram",
+        "documentation": {}
+    },
+    {
+        "label": "filters",
+        "importPath": "pyrogram",
+        "description": "pyrogram",
+        "isExtraImport": true,
+        "detail": "pyrogram",
+        "documentation": {}
+    },
+    {
+        "label": "Bot",
+        "importPath": "bot",
+        "description": "bot",
+        "isExtraImport": true,
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "Bot",
+        "importPath": "bot",
+        "description": "bot",
+        "isExtraImport": true,
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "Bot",
+        "importPath": "bot",
+        "description": "bot",
+        "isExtraImport": true,
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "Bot",
+        "importPath": "bot",
+        "description": "bot",
+        "isExtraImport": true,
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "Bot",
+        "importPath": "bot",
+        "description": "bot",
+        "isExtraImport": true,
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "Bot",
+        "importPath": "bot",
+        "description": "bot",
+        "isExtraImport": true,
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "Bot",
+        "importPath": "bot",
+        "description": "bot",
+        "isExtraImport": true,
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "pyrogram.types",
+        "description": "pyrogram.types",
+        "isExtraImport": true,
+        "detail": "pyrogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "InlineKeyboardMarkup",
+        "importPath": "pyrogram.types",
+        "description": "pyrogram.types",
+        "isExtraImport": true,
+        "detail": "pyrogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "InlineKeyboardButton",
+        "importPath": "pyrogram.types",
+        "description": "pyrogram.types",
+        "isExtraImport": true,
+        "detail": "pyrogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "CallbackQuery",
+        "importPath": "pyrogram.types",
+        "description": "pyrogram.types",
+        "isExtraImport": true,
+        "detail": "pyrogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "pyrogram.types",
+        "description": "pyrogram.types",
+        "isExtraImport": true,
+        "detail": "pyrogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "InlineKeyboardMarkup",
+        "importPath": "pyrogram.types",
+        "description": "pyrogram.types",
+        "isExtraImport": true,
+        "detail": "pyrogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "InlineKeyboardButton",
+        "importPath": "pyrogram.types",
+        "description": "pyrogram.types",
+        "isExtraImport": true,
+        "detail": "pyrogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "pyrogram.types",
+        "description": "pyrogram.types",
+        "isExtraImport": true,
+        "detail": "pyrogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "pyrogram.types",
+        "description": "pyrogram.types",
+        "isExtraImport": true,
+        "detail": "pyrogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "InlineKeyboardMarkup",
+        "importPath": "pyrogram.types",
+        "description": "pyrogram.types",
+        "isExtraImport": true,
+        "detail": "pyrogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "InlineKeyboardButton",
+        "importPath": "pyrogram.types",
+        "description": "pyrogram.types",
+        "isExtraImport": true,
+        "detail": "pyrogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "pyrogram.types",
+        "description": "pyrogram.types",
+        "isExtraImport": true,
+        "detail": "pyrogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "InlineKeyboardMarkup",
+        "importPath": "pyrogram.types",
+        "description": "pyrogram.types",
+        "isExtraImport": true,
+        "detail": "pyrogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "InlineKeyboardButton",
+        "importPath": "pyrogram.types",
+        "description": "pyrogram.types",
+        "isExtraImport": true,
+        "detail": "pyrogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "CallbackQuery",
+        "importPath": "pyrogram.types",
+        "description": "pyrogram.types",
+        "isExtraImport": true,
+        "detail": "pyrogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "pyrogram.types",
+        "description": "pyrogram.types",
+        "isExtraImport": true,
+        "detail": "pyrogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "FloodWait",
+        "importPath": "pyrogram.errors",
+        "description": "pyrogram.errors",
+        "isExtraImport": true,
+        "detail": "pyrogram.errors",
+        "documentation": {}
+    },
+    {
+        "label": "FloodWait",
+        "importPath": "pyrogram.errors",
+        "description": "pyrogram.errors",
+        "isExtraImport": true,
+        "detail": "pyrogram.errors",
+        "documentation": {}
+    },
+    {
+        "label": "UserIsBlocked",
+        "importPath": "pyrogram.errors",
+        "description": "pyrogram.errors",
+        "isExtraImport": true,
+        "detail": "pyrogram.errors",
+        "documentation": {}
+    },
+    {
+        "label": "InputUserDeactivated",
+        "importPath": "pyrogram.errors",
+        "description": "pyrogram.errors",
+        "isExtraImport": true,
+        "detail": "pyrogram.errors",
+        "documentation": {}
+    },
+    {
+        "label": "FloodWait",
+        "importPath": "pyrogram.errors",
+        "description": "pyrogram.errors",
+        "isExtraImport": true,
+        "detail": "pyrogram.errors",
+        "documentation": {}
+    },
+    {
+        "label": "encode",
+        "importPath": "helper_func",
+        "description": "helper_func",
+        "isExtraImport": true,
+        "detail": "helper_func",
+        "documentation": {}
+    },
+    {
+        "label": "encode",
+        "importPath": "helper_func",
+        "description": "helper_func",
+        "isExtraImport": true,
+        "detail": "helper_func",
+        "documentation": {}
+    },
+    {
+        "label": "get_message_id",
+        "importPath": "helper_func",
+        "description": "helper_func",
+        "isExtraImport": true,
+        "detail": "helper_func",
+        "documentation": {}
+    },
+    {
+        "label": "subscribed",
+        "importPath": "helper_func",
+        "description": "helper_func",
+        "isExtraImport": true,
+        "detail": "helper_func",
+        "documentation": {}
+    },
+    {
+        "label": "encode",
+        "importPath": "helper_func",
+        "description": "helper_func",
+        "isExtraImport": true,
+        "detail": "helper_func",
+        "documentation": {}
+    },
+    {
+        "label": "decode",
+        "importPath": "helper_func",
+        "description": "helper_func",
+        "isExtraImport": true,
+        "detail": "helper_func",
+        "documentation": {}
+    },
+    {
+        "label": "get_messages",
+        "importPath": "helper_func",
+        "description": "helper_func",
+        "isExtraImport": true,
+        "detail": "helper_func",
+        "documentation": {}
+    },
+    {
+        "label": "get_readable_time",
+        "importPath": "helper_func",
+        "description": "helper_func",
+        "isExtraImport": true,
+        "detail": "helper_func",
+        "documentation": {}
+    },
+    {
+        "label": "web",
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "isExtraImport": true,
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "web",
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "isExtraImport": true,
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "ParseMode",
+        "importPath": "pyrogram.enums",
+        "description": "pyrogram.enums",
+        "isExtraImport": true,
+        "detail": "pyrogram.enums",
+        "documentation": {}
+    },
+    {
+        "label": "ParseMode",
+        "importPath": "pyrogram.enums",
+        "description": "pyrogram.enums",
+        "isExtraImport": true,
+        "detail": "pyrogram.enums",
+        "documentation": {}
+    },
+    {
+        "label": "ChatMemberStatus",
+        "importPath": "pyrogram.enums",
+        "description": "pyrogram.enums",
+        "isExtraImport": true,
+        "detail": "pyrogram.enums",
+        "documentation": {}
+    },
+    {
+        "label": "add_user",
+        "importPath": "database.database",
+        "description": "database.database",
+        "isExtraImport": true,
+        "detail": "database.database",
+        "documentation": {}
+    },
+    {
+        "label": "del_user",
+        "importPath": "database.database",
+        "description": "database.database",
+        "isExtraImport": true,
+        "detail": "database.database",
+        "documentation": {}
+    },
+    {
+        "label": "full_userbase",
+        "importPath": "database.database",
+        "description": "database.database",
+        "isExtraImport": true,
+        "detail": "database.database",
+        "documentation": {}
+    },
+    {
+        "label": "present_user",
+        "importPath": "database.database",
+        "description": "database.database",
+        "isExtraImport": true,
+        "detail": "database.database",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "web_server",
+        "importPath": "plugins",
+        "description": "plugins",
+        "isExtraImport": true,
+        "detail": "plugins",
+        "documentation": {}
+    },
+    {
+        "label": "pyromod.listen",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyromod.listen",
+        "description": "pyromod.listen",
+        "detail": "pyromod.listen",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "RotatingFileHandler",
+        "importPath": "logging.handlers",
+        "description": "logging.handlers",
+        "isExtraImport": true,
+        "detail": "logging.handlers",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "UserNotParticipant",
+        "importPath": "pyrogram.errors.exceptions.bad_request_400",
+        "description": "pyrogram.errors.exceptions.bad_request_400",
+        "isExtraImport": true,
+        "detail": "pyrogram.errors.exceptions.bad_request_400",
+        "documentation": {}
+    },
+    {
+        "label": "dbclient",
+        "kind": 5,
+        "importPath": "database.database",
+        "description": "database.database",
+        "peekOfCode": "dbclient = pymongo.MongoClient(DB_URI)\ndatabase = dbclient[DB_NAME]\nuser_data = database['users']\nasync def present_user(user_id : int):\n    found = user_data.find_one({'_id': user_id})\n    return bool(found)\nasync def add_user(user_id: int):\n    user_data.insert_one({'_id': user_id})\n    return\nasync def full_userbase():",
+        "detail": "database.database",
+        "documentation": {}
+    },
+    {
+        "label": "database",
+        "kind": 5,
+        "importPath": "database.database",
+        "description": "database.database",
+        "peekOfCode": "database = dbclient[DB_NAME]\nuser_data = database['users']\nasync def present_user(user_id : int):\n    found = user_data.find_one({'_id': user_id})\n    return bool(found)\nasync def add_user(user_id: int):\n    user_data.insert_one({'_id': user_id})\n    return\nasync def full_userbase():\n    user_docs = user_data.find()",
+        "detail": "database.database",
+        "documentation": {}
+    },
+    {
+        "label": "user_data",
+        "kind": 5,
+        "importPath": "database.database",
+        "description": "database.database",
+        "peekOfCode": "user_data = database['users']\nasync def present_user(user_id : int):\n    found = user_data.find_one({'_id': user_id})\n    return bool(found)\nasync def add_user(user_id: int):\n    user_data.insert_one({'_id': user_id})\n    return\nasync def full_userbase():\n    user_docs = user_data.find()\n    user_ids = []",
+        "detail": "database.database",
+        "documentation": {}
+    },
+    {
+        "label": "routes",
+        "kind": 5,
+        "importPath": "plugins.route",
+        "description": "plugins.route",
+        "peekOfCode": "routes = web.RouteTableDef()\n@routes.get(\"/\", allow_head=True)\nasync def root_route_handler(request):\n    return web.json_response(\"TEAMUHD\")",
+        "detail": "plugins.route",
+        "documentation": {}
+    },
+    {
+        "label": "WAIT_MSG",
+        "kind": 5,
+        "importPath": "plugins.start",
+        "description": "plugins.start",
+        "peekOfCode": "WAIT_MSG = \"\"\"\"<b>ᴘʀᴏᴄᴇꜱꜱɪɴɢ ....⎔⬣ </b>\"\"\"\nREPLY_ERROR = \"\"\"<code> ⏣ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ᴀꜱ ᴀ ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇꜱꜱᴀɢᴇ ᴡɪᴛʜ ᴏᴜᴛ ᴀɴʏ ꜱᴘᴀᴄᴇꜱ ⏣ </code>\"\"\"\n# =====================================================================================##\n@Bot.on_message(filters.command(\"start\") & filters.private)\nasync def not_joined(client: Client, message: Message):\n    buttons = [\n        [\n            InlineKeyboardButton(text=\"◤ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ◥\", url=client.invitelink),\n            InlineKeyboardButton(text=\"◣ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ◢\", url=client.invitelink2),\n        ]",
+        "detail": "plugins.start",
+        "documentation": {}
+    },
+    {
+        "label": "REPLY_ERROR",
+        "kind": 5,
+        "importPath": "plugins.start",
+        "description": "plugins.start",
+        "peekOfCode": "REPLY_ERROR = \"\"\"<code> ⏣ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ᴀꜱ ᴀ ʀᴇᴘʟʏ ᴛᴏ ᴀɴʏ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇꜱꜱᴀɢᴇ ᴡɪᴛʜ ᴏᴜᴛ ᴀɴʏ ꜱᴘᴀᴄᴇꜱ ⏣ </code>\"\"\"\n# =====================================================================================##\n@Bot.on_message(filters.command(\"start\") & filters.private)\nasync def not_joined(client: Client, message: Message):\n    buttons = [\n        [\n            InlineKeyboardButton(text=\"◤ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ◥\", url=client.invitelink),\n            InlineKeyboardButton(text=\"◣ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ◢\", url=client.invitelink2),\n        ]\n    ]",
+        "detail": "plugins.start",
+        "documentation": {}
+    },
+    {
+        "label": "Bot",
+        "kind": 6,
+        "importPath": "bot",
+        "description": "bot",
+        "peekOfCode": "class Bot(Client):\n    def __init__(self):\n        super().__init__(\n            name=\"Bot\",\n            api_hash=API_HASH,\n            api_id=APP_ID,\n            plugins={\n                \"root\": \"plugins\"\n            },\n            workers=TG_BOT_WORKERS,",
+        "detail": "bot",
+        "documentation": {}
+    },
+    {
+        "label": "LOGGER",
+        "kind": 2,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "def LOGGER(name: str) -> logging.Logger:\n    return logging.getLogger(name)",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "TG_BOT_TOKEN",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "TG_BOT_TOKEN = os.environ.get(\"TG_BOT_TOKEN\", \"\")\nAPP_ID = int(os.environ.get(\"APP_ID\", \"\"))\nAPI_HASH = os.environ.get(\"API_HASH\", \"\")\nCHANNEL_ID = int(os.environ.get(\"CHANNEL_ID\", \"\"))\nOWNER = os.environ.get(\"OWNER\", \"RUBAN9124\")\nOWNER_ID = int(os.environ.get(\"OWNER_ID\", \"1032438381\"))\nPORT = os.environ.get(\"PORT\", \"8030\")\nDB_URI = os.environ.get(\"DATABASE_URL\", \"\")\nDB_NAME = os.environ.get(\"DATABASE_NAME\", \"\")\nFORCE_SUB_CHANNEL = int(os.environ.get(\"FORCE_SUB_CHANNEL\", \"\"))",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "APP_ID",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "APP_ID = int(os.environ.get(\"APP_ID\", \"\"))\nAPI_HASH = os.environ.get(\"API_HASH\", \"\")\nCHANNEL_ID = int(os.environ.get(\"CHANNEL_ID\", \"\"))\nOWNER = os.environ.get(\"OWNER\", \"RUBAN9124\")\nOWNER_ID = int(os.environ.get(\"OWNER_ID\", \"1032438381\"))\nPORT = os.environ.get(\"PORT\", \"8030\")\nDB_URI = os.environ.get(\"DATABASE_URL\", \"\")\nDB_NAME = os.environ.get(\"DATABASE_NAME\", \"\")\nFORCE_SUB_CHANNEL = int(os.environ.get(\"FORCE_SUB_CHANNEL\", \"\"))\nFORCE_SUB_CHANNEL2 = int(os.environ.get(\"FORCE_SUB_CHANNEL2\", \"\"))",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "API_HASH",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "API_HASH = os.environ.get(\"API_HASH\", \"\")\nCHANNEL_ID = int(os.environ.get(\"CHANNEL_ID\", \"\"))\nOWNER = os.environ.get(\"OWNER\", \"RUBAN9124\")\nOWNER_ID = int(os.environ.get(\"OWNER_ID\", \"1032438381\"))\nPORT = os.environ.get(\"PORT\", \"8030\")\nDB_URI = os.environ.get(\"DATABASE_URL\", \"\")\nDB_NAME = os.environ.get(\"DATABASE_NAME\", \"\")\nFORCE_SUB_CHANNEL = int(os.environ.get(\"FORCE_SUB_CHANNEL\", \"\"))\nFORCE_SUB_CHANNEL2 = int(os.environ.get(\"FORCE_SUB_CHANNEL2\", \"\"))\nTG_BOT_WORKERS = int(os.environ.get(\"TG_BOT_WORKERS\", \"4\"))",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "CHANNEL_ID",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "CHANNEL_ID = int(os.environ.get(\"CHANNEL_ID\", \"\"))\nOWNER = os.environ.get(\"OWNER\", \"RUBAN9124\")\nOWNER_ID = int(os.environ.get(\"OWNER_ID\", \"1032438381\"))\nPORT = os.environ.get(\"PORT\", \"8030\")\nDB_URI = os.environ.get(\"DATABASE_URL\", \"\")\nDB_NAME = os.environ.get(\"DATABASE_NAME\", \"\")\nFORCE_SUB_CHANNEL = int(os.environ.get(\"FORCE_SUB_CHANNEL\", \"\"))\nFORCE_SUB_CHANNEL2 = int(os.environ.get(\"FORCE_SUB_CHANNEL2\", \"\"))\nTG_BOT_WORKERS = int(os.environ.get(\"TG_BOT_WORKERS\", \"4\"))\nSTART_MSG = os.environ.get(\"START_MESSAGE\", \"<b>ʙᴀᴋᴋᴀᴀᴀ!! {first}\\n\\n ɪ ᴀᴍ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ, ɪ ᴄᴀɴ sᴛᴏʀᴇ ᴘʀɪᴠᴀᴛᴇ ғɪʟᴇs ɪɴ sᴘᴇᴄɪғɪᴇᴅ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴏᴛʜᴇʀ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ɪᴛ ғʀᴏᴍ sᴘᴇᴄɪᴀʟ ʟɪɴᴋ.</b>\")",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "OWNER",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "OWNER = os.environ.get(\"OWNER\", \"RUBAN9124\")\nOWNER_ID = int(os.environ.get(\"OWNER_ID\", \"1032438381\"))\nPORT = os.environ.get(\"PORT\", \"8030\")\nDB_URI = os.environ.get(\"DATABASE_URL\", \"\")\nDB_NAME = os.environ.get(\"DATABASE_NAME\", \"\")\nFORCE_SUB_CHANNEL = int(os.environ.get(\"FORCE_SUB_CHANNEL\", \"\"))\nFORCE_SUB_CHANNEL2 = int(os.environ.get(\"FORCE_SUB_CHANNEL2\", \"\"))\nTG_BOT_WORKERS = int(os.environ.get(\"TG_BOT_WORKERS\", \"4\"))\nSTART_MSG = os.environ.get(\"START_MESSAGE\", \"<b>ʙᴀᴋᴋᴀᴀᴀ!! {first}\\n\\n ɪ ᴀᴍ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ, ɪ ᴄᴀɴ sᴛᴏʀᴇ ᴘʀɪᴠᴀᴛᴇ ғɪʟᴇs ɪɴ sᴘᴇᴄɪғɪᴇᴅ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴏᴛʜᴇʀ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ɪᴛ ғʀᴏᴍ sᴘᴇᴄɪᴀʟ ʟɪɴᴋ.</b>\")\ntry:",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "OWNER_ID",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "OWNER_ID = int(os.environ.get(\"OWNER_ID\", \"1032438381\"))\nPORT = os.environ.get(\"PORT\", \"8030\")\nDB_URI = os.environ.get(\"DATABASE_URL\", \"\")\nDB_NAME = os.environ.get(\"DATABASE_NAME\", \"\")\nFORCE_SUB_CHANNEL = int(os.environ.get(\"FORCE_SUB_CHANNEL\", \"\"))\nFORCE_SUB_CHANNEL2 = int(os.environ.get(\"FORCE_SUB_CHANNEL2\", \"\"))\nTG_BOT_WORKERS = int(os.environ.get(\"TG_BOT_WORKERS\", \"4\"))\nSTART_MSG = os.environ.get(\"START_MESSAGE\", \"<b>ʙᴀᴋᴋᴀᴀᴀ!! {first}\\n\\n ɪ ᴀᴍ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ, ɪ ᴄᴀɴ sᴛᴏʀᴇ ᴘʀɪᴠᴀᴛᴇ ғɪʟᴇs ɪɴ sᴘᴇᴄɪғɪᴇᴅ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴏᴛʜᴇʀ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ɪᴛ ғʀᴏᴍ sᴘᴇᴄɪᴀʟ ʟɪɴᴋ.</b>\")\ntry:\n    ADMINS=[1032438381]",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "PORT",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "PORT = os.environ.get(\"PORT\", \"8030\")\nDB_URI = os.environ.get(\"DATABASE_URL\", \"\")\nDB_NAME = os.environ.get(\"DATABASE_NAME\", \"\")\nFORCE_SUB_CHANNEL = int(os.environ.get(\"FORCE_SUB_CHANNEL\", \"\"))\nFORCE_SUB_CHANNEL2 = int(os.environ.get(\"FORCE_SUB_CHANNEL2\", \"\"))\nTG_BOT_WORKERS = int(os.environ.get(\"TG_BOT_WORKERS\", \"4\"))\nSTART_MSG = os.environ.get(\"START_MESSAGE\", \"<b>ʙᴀᴋᴋᴀᴀᴀ!! {first}\\n\\n ɪ ᴀᴍ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ, ɪ ᴄᴀɴ sᴛᴏʀᴇ ᴘʀɪᴠᴀᴛᴇ ғɪʟᴇs ɪɴ sᴘᴇᴄɪғɪᴇᴅ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴏᴛʜᴇʀ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ɪᴛ ғʀᴏᴍ sᴘᴇᴄɪᴀʟ ʟɪɴᴋ.</b>\")\ntry:\n    ADMINS=[1032438381]\n    for x in (os.environ.get(\"ADMINS\", \"1032438381\").split()):",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DB_URI",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "DB_URI = os.environ.get(\"DATABASE_URL\", \"\")\nDB_NAME = os.environ.get(\"DATABASE_NAME\", \"\")\nFORCE_SUB_CHANNEL = int(os.environ.get(\"FORCE_SUB_CHANNEL\", \"\"))\nFORCE_SUB_CHANNEL2 = int(os.environ.get(\"FORCE_SUB_CHANNEL2\", \"\"))\nTG_BOT_WORKERS = int(os.environ.get(\"TG_BOT_WORKERS\", \"4\"))\nSTART_MSG = os.environ.get(\"START_MESSAGE\", \"<b>ʙᴀᴋᴋᴀᴀᴀ!! {first}\\n\\n ɪ ᴀᴍ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ, ɪ ᴄᴀɴ sᴛᴏʀᴇ ᴘʀɪᴠᴀᴛᴇ ғɪʟᴇs ɪɴ sᴘᴇᴄɪғɪᴇᴅ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴏᴛʜᴇʀ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ɪᴛ ғʀᴏᴍ sᴘᴇᴄɪᴀʟ ʟɪɴᴋ.</b>\")\ntry:\n    ADMINS=[1032438381]\n    for x in (os.environ.get(\"ADMINS\", \"1032438381\").split()):\n        ADMINS.append(int(x))",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DB_NAME",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "DB_NAME = os.environ.get(\"DATABASE_NAME\", \"\")\nFORCE_SUB_CHANNEL = int(os.environ.get(\"FORCE_SUB_CHANNEL\", \"\"))\nFORCE_SUB_CHANNEL2 = int(os.environ.get(\"FORCE_SUB_CHANNEL2\", \"\"))\nTG_BOT_WORKERS = int(os.environ.get(\"TG_BOT_WORKERS\", \"4\"))\nSTART_MSG = os.environ.get(\"START_MESSAGE\", \"<b>ʙᴀᴋᴋᴀᴀᴀ!! {first}\\n\\n ɪ ᴀᴍ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ, ɪ ᴄᴀɴ sᴛᴏʀᴇ ᴘʀɪᴠᴀᴛᴇ ғɪʟᴇs ɪɴ sᴘᴇᴄɪғɪᴇᴅ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴏᴛʜᴇʀ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ɪᴛ ғʀᴏᴍ sᴘᴇᴄɪᴀʟ ʟɪɴᴋ.</b>\")\ntry:\n    ADMINS=[1032438381]\n    for x in (os.environ.get(\"ADMINS\", \"1032438381\").split()):\n        ADMINS.append(int(x))\nexcept ValueError:",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "FORCE_SUB_CHANNEL",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "FORCE_SUB_CHANNEL = int(os.environ.get(\"FORCE_SUB_CHANNEL\", \"\"))\nFORCE_SUB_CHANNEL2 = int(os.environ.get(\"FORCE_SUB_CHANNEL2\", \"\"))\nTG_BOT_WORKERS = int(os.environ.get(\"TG_BOT_WORKERS\", \"4\"))\nSTART_MSG = os.environ.get(\"START_MESSAGE\", \"<b>ʙᴀᴋᴋᴀᴀᴀ!! {first}\\n\\n ɪ ᴀᴍ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ, ɪ ᴄᴀɴ sᴛᴏʀᴇ ᴘʀɪᴠᴀᴛᴇ ғɪʟᴇs ɪɴ sᴘᴇᴄɪғɪᴇᴅ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴏᴛʜᴇʀ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ɪᴛ ғʀᴏᴍ sᴘᴇᴄɪᴀʟ ʟɪɴᴋ.</b>\")\ntry:\n    ADMINS=[1032438381]\n    for x in (os.environ.get(\"ADMINS\", \"1032438381\").split()):\n        ADMINS.append(int(x))\nexcept ValueError:\n        raise Exception(\"Your Admins list does not contain valid integers.\")",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "FORCE_SUB_CHANNEL2",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "FORCE_SUB_CHANNEL2 = int(os.environ.get(\"FORCE_SUB_CHANNEL2\", \"\"))\nTG_BOT_WORKERS = int(os.environ.get(\"TG_BOT_WORKERS\", \"4\"))\nSTART_MSG = os.environ.get(\"START_MESSAGE\", \"<b>ʙᴀᴋᴋᴀᴀᴀ!! {first}\\n\\n ɪ ᴀᴍ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ, ɪ ᴄᴀɴ sᴛᴏʀᴇ ᴘʀɪᴠᴀᴛᴇ ғɪʟᴇs ɪɴ sᴘᴇᴄɪғɪᴇᴅ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴏᴛʜᴇʀ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ɪᴛ ғʀᴏᴍ sᴘᴇᴄɪᴀʟ ʟɪɴᴋ.</b>\")\ntry:\n    ADMINS=[1032438381]\n    for x in (os.environ.get(\"ADMINS\", \"1032438381\").split()):\n        ADMINS.append(int(x))\nexcept ValueError:\n        raise Exception(\"Your Admins list does not contain valid integers.\")\nFORCE_MSG = os.environ.get(\"FORCE_SUB_MESSAGE\", \"ʜᴇʟʟᴏ {first}\\n\\n<b>ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟs ᴀɴᴅ ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʀʏ ᴀɢᴀɪɴ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ʀᴇǫᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇ.</b>\")",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "TG_BOT_WORKERS",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "TG_BOT_WORKERS = int(os.environ.get(\"TG_BOT_WORKERS\", \"4\"))\nSTART_MSG = os.environ.get(\"START_MESSAGE\", \"<b>ʙᴀᴋᴋᴀᴀᴀ!! {first}\\n\\n ɪ ᴀᴍ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ, ɪ ᴄᴀɴ sᴛᴏʀᴇ ᴘʀɪᴠᴀᴛᴇ ғɪʟᴇs ɪɴ sᴘᴇᴄɪғɪᴇᴅ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴏᴛʜᴇʀ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ɪᴛ ғʀᴏᴍ sᴘᴇᴄɪᴀʟ ʟɪɴᴋ.</b>\")\ntry:\n    ADMINS=[1032438381]\n    for x in (os.environ.get(\"ADMINS\", \"1032438381\").split()):\n        ADMINS.append(int(x))\nexcept ValueError:\n        raise Exception(\"Your Admins list does not contain valid integers.\")\nFORCE_MSG = os.environ.get(\"FORCE_SUB_MESSAGE\", \"ʜᴇʟʟᴏ {first}\\n\\n<b>ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟs ᴀɴᴅ ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʀʏ ᴀɢᴀɪɴ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ʀᴇǫᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇ.</b>\")\nCUSTOM_CAPTION = os.environ.get(\"CUSTOM_CAPTION\", None)",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "START_MSG",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "START_MSG = os.environ.get(\"START_MESSAGE\", \"<b>ʙᴀᴋᴋᴀᴀᴀ!! {first}\\n\\n ɪ ᴀᴍ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ, ɪ ᴄᴀɴ sᴛᴏʀᴇ ᴘʀɪᴠᴀᴛᴇ ғɪʟᴇs ɪɴ sᴘᴇᴄɪғɪᴇᴅ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴏᴛʜᴇʀ ᴜsᴇʀs ᴄᴀɴ ᴀᴄᴄᴇss ɪᴛ ғʀᴏᴍ sᴘᴇᴄɪᴀʟ ʟɪɴᴋ.</b>\")\ntry:\n    ADMINS=[1032438381]\n    for x in (os.environ.get(\"ADMINS\", \"1032438381\").split()):\n        ADMINS.append(int(x))\nexcept ValueError:\n        raise Exception(\"Your Admins list does not contain valid integers.\")\nFORCE_MSG = os.environ.get(\"FORCE_SUB_MESSAGE\", \"ʜᴇʟʟᴏ {first}\\n\\n<b>ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟs ᴀɴᴅ ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʀʏ ᴀɢᴀɪɴ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ʀᴇǫᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇ.</b>\")\nCUSTOM_CAPTION = os.environ.get(\"CUSTOM_CAPTION\", None)\nPROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', \"True\") == \"True\" else False",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "FORCE_MSG",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "FORCE_MSG = os.environ.get(\"FORCE_SUB_MESSAGE\", \"ʜᴇʟʟᴏ {first}\\n\\n<b>ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟs ᴀɴᴅ ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʀʏ ᴀɢᴀɪɴ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ʀᴇǫᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇ.</b>\")\nCUSTOM_CAPTION = os.environ.get(\"CUSTOM_CAPTION\", None)\nPROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', \"True\") == \"True\" else False\nDISABLE_CHANNEL_BUTTON = os.environ.get(\"DISABLE_CHANNEL_BUTTON\", None) == 'True'\nBOT_STATS_TEXT = \"<b>BOT UPTIME</b>\\n{uptime}\"\nUSER_REPLY_TEXT = \"ʙᴀᴋᴋᴀ ! ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ ꜱᴇɴᴘᴀɪ!!\"\nADMINS.append(OWNER_ID)\nADMINS.append(1032438381)\nLOG_FILE_NAME = \"filesharingbot.txt\"\nlogging.basicConfig(",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "CUSTOM_CAPTION",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "CUSTOM_CAPTION = os.environ.get(\"CUSTOM_CAPTION\", None)\nPROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', \"True\") == \"True\" else False\nDISABLE_CHANNEL_BUTTON = os.environ.get(\"DISABLE_CHANNEL_BUTTON\", None) == 'True'\nBOT_STATS_TEXT = \"<b>BOT UPTIME</b>\\n{uptime}\"\nUSER_REPLY_TEXT = \"ʙᴀᴋᴋᴀ ! ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ ꜱᴇɴᴘᴀɪ!!\"\nADMINS.append(OWNER_ID)\nADMINS.append(1032438381)\nLOG_FILE_NAME = \"filesharingbot.txt\"\nlogging.basicConfig(\n    level=logging.INFO,",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "PROTECT_CONTENT",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', \"True\") == \"True\" else False\nDISABLE_CHANNEL_BUTTON = os.environ.get(\"DISABLE_CHANNEL_BUTTON\", None) == 'True'\nBOT_STATS_TEXT = \"<b>BOT UPTIME</b>\\n{uptime}\"\nUSER_REPLY_TEXT = \"ʙᴀᴋᴋᴀ ! ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ ꜱᴇɴᴘᴀɪ!!\"\nADMINS.append(OWNER_ID)\nADMINS.append(1032438381)\nLOG_FILE_NAME = \"filesharingbot.txt\"\nlogging.basicConfig(\n    level=logging.INFO,\n    format=\"[%(asctime)s - %(levelname)s] - %(name)s - %(message)s\",",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DISABLE_CHANNEL_BUTTON",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "DISABLE_CHANNEL_BUTTON = os.environ.get(\"DISABLE_CHANNEL_BUTTON\", None) == 'True'\nBOT_STATS_TEXT = \"<b>BOT UPTIME</b>\\n{uptime}\"\nUSER_REPLY_TEXT = \"ʙᴀᴋᴋᴀ ! ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ ꜱᴇɴᴘᴀɪ!!\"\nADMINS.append(OWNER_ID)\nADMINS.append(1032438381)\nLOG_FILE_NAME = \"filesharingbot.txt\"\nlogging.basicConfig(\n    level=logging.INFO,\n    format=\"[%(asctime)s - %(levelname)s] - %(name)s - %(message)s\",\n    datefmt='%d-%b-%y %H:%M:%S',",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "BOT_STATS_TEXT",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "BOT_STATS_TEXT = \"<b>BOT UPTIME</b>\\n{uptime}\"\nUSER_REPLY_TEXT = \"ʙᴀᴋᴋᴀ ! ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ ꜱᴇɴᴘᴀɪ!!\"\nADMINS.append(OWNER_ID)\nADMINS.append(1032438381)\nLOG_FILE_NAME = \"filesharingbot.txt\"\nlogging.basicConfig(\n    level=logging.INFO,\n    format=\"[%(asctime)s - %(levelname)s] - %(name)s - %(message)s\",\n    datefmt='%d-%b-%y %H:%M:%S',\n    handlers=[",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "USER_REPLY_TEXT",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "USER_REPLY_TEXT = \"ʙᴀᴋᴋᴀ ! ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ ꜱᴇɴᴘᴀɪ!!\"\nADMINS.append(OWNER_ID)\nADMINS.append(1032438381)\nLOG_FILE_NAME = \"filesharingbot.txt\"\nlogging.basicConfig(\n    level=logging.INFO,\n    format=\"[%(asctime)s - %(levelname)s] - %(name)s - %(message)s\",\n    datefmt='%d-%b-%y %H:%M:%S',\n    handlers=[\n        RotatingFileHandler(",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "LOG_FILE_NAME",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "LOG_FILE_NAME = \"filesharingbot.txt\"\nlogging.basicConfig(\n    level=logging.INFO,\n    format=\"[%(asctime)s - %(levelname)s] - %(name)s - %(message)s\",\n    datefmt='%d-%b-%y %H:%M:%S',\n    handlers=[\n        RotatingFileHandler(\n            LOG_FILE_NAME,\n            maxBytes=50000000,\n            backupCount=10",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "get_readable_time",
+        "kind": 2,
+        "importPath": "helper_func",
+        "description": "helper_func",
+        "peekOfCode": "def get_readable_time(seconds: int) -> str:\n    count = 0\n    up_time = \"\"\n    time_list = []\n    time_suffix_list = [\"s\", \"m\", \"h\", \"days\"]\n    while count < 4:\n        count += 1\n        remainder, result = divmod(seconds, 60) if count < 3 else divmod(seconds, 24)\n        if seconds == 0 and remainder == 0:\n            break",
+        "detail": "helper_func",
+        "documentation": {}
+    },
+    {
+        "label": "subscribed",
+        "kind": 5,
+        "importPath": "helper_func",
+        "description": "helper_func",
+        "peekOfCode": "subscribed = filters.create(is_subscribed)",
+        "detail": "helper_func",
+        "documentation": {}
+    }
+]
