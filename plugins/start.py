@@ -141,20 +141,28 @@ REPLY_ERROR = """<code> ⏣ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ᴀꜱ ᴀ
 
 # =====================================================================================##
 
-
 @Bot.on_message(filters.command("start") & filters.private)
 async def not_joined(client: Client, message: Message):
-    buttons = [
-        [
-            InlineKeyboardButton(text="◤ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ◥", url=client.invitelink),
-            InlineKeyboardButton(text="◣ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ◢", url=client.invitelink2),
+    try:
+        invite_link1 = await client.create_chat_invite_link(chat_id=client.db_channel.id, is_revoked=True)
+        invite_link2 = await client.create_chat_invite_link(chat_id=client.db_channel2.id, is_revoked=True)
+
+        buttons = [
+            [
+                InlineKeyboardButton(text="◤ Join Channel 1 ◥", url=invite_link1.invite_link),
+                InlineKeyboardButton(text="◣ Join Channel 2 ◢", url=invite_link2.invite_link),
+            ]
         ]
-    ]
+    except Exception as e:
+        # Handle any errors that might occur during invite link creation
+        print("Error creating invite links:", e)
+        return
+
     try:
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text="⌬ ᴛʀʏ ᴀɢᴀɪɴ ⌬",
+                    text="⌬ Try Again ⌬",
                     url=f"https://t.me/{client.username}?start={message.command[1]}",
                 )
             ]
