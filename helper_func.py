@@ -27,7 +27,7 @@ async def is_subscribed(filter, client, update):
             print("Error checking membership for FORCE_SUB_CHANNEL:", e)
 
         try:
-            join_requests = await client.get_chat_join_requests(chat_id=FORCE_SUB_CHANNEL)
+            join_requests = client.iter_chat_members(chat_id=FORCE_SUB_CHANNEL, filter="kicked")
             async for request in join_requests:
                 if request.user.id == user_id:
                     return True
@@ -47,16 +47,7 @@ async def is_subscribed(filter, client, update):
             print("Error checking membership for FORCE_SUB_CHANNEL2:", e)
 
         try:
-            member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL2, user_id=user_id)
-            if member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
-                return True
-        except UserNotParticipant:
-            pass
-        except Exception as e:
-            print("Error checking membership for FORCE_SUB_CHANNEL2:", e)
-
-        try:
-            join_requests = await client.get_chat_join_requests(chat_id=FORCE_SUB_CHANNEL2)
+            join_requests = client.iter_chat_members(chat_id=FORCE_SUB_CHANNEL2, filter="kicked")
             async for request in join_requests:
                 if request.user.id == user_id:
                     return True
@@ -67,6 +58,7 @@ async def is_subscribed(filter, client, update):
             return False
 
     return False
+
 
         
 async def encode(string):
