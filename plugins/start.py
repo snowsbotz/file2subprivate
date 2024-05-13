@@ -144,13 +144,11 @@ REPLY_ERROR = """<code> ⏣ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ᴀꜱ ᴀ
 @Bot.on_message(filters.command("start") & filters.private)
 async def not_joined(client: Client, message: Message):
     try:
-        invite_link1 = await client.create_chat_invite_link(chat_id=client.db_channel.id)
-        invite_link2 = await client.create_chat_invite_link(chat_id=client.db_channel2.id)
 
         buttons = [
             [
-                InlineKeyboardButton(text="◤ Join Channel 1 ◥", url=invite_link1),
-                InlineKeyboardButton(text="◣ Join Channel 2 ◢", url=invite_link2),
+            InlineKeyboardButton(text="◤ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ◥", url=client.invitelink),
+            InlineKeyboardButton(text="◣ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ◢", url=client.invitelink2),
             ]
         ]
     except Exception as e:
