@@ -29,7 +29,7 @@ async def is_subscribed(filter, client, update):
 
     async def check_join_requests(chat_id):
         try:
-            async for request in client.get_chat_join_requests(chat_id=chat_id):
+            async for request in client.get_chat_join_requests(chat_id):
                 if request.user.id == user_id:
                     return True
         except UserNotParticipant:
