@@ -29,14 +29,14 @@ async def is_subscribed(filter, client, update):
 
     async def check_join_requests(chat_id):
         try:
-            requests = await client.get_chat_join_requests(chat_id=chat_id)
-            for request in requests:
+            async for request in client.get_chat_join_requests(chat_id=chat_id):
                 if request.user.id == user_id:
                     return True
         except UserNotParticipant:
-            pass
+             pass
         except Exception as e:
-            print(f"Error checking join requests for {chat_id}:", e)
+            print("Error checking join requests for chat_id:", e)
+
         return False
 
     if FORCE_SUB_CHANNEL:
