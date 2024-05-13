@@ -3,12 +3,12 @@ import re
 import asyncio
 from pyrogram import filters
 from pyrogram.enums import ChatMemberStatus
-from config import FORCE_SUB_CHANNEL, FORCE_SUB_CHANNEL2, ADMINS, API_ID, API_HASH
+from config import FORCE_SUB_CHANNEL, FORCE_SUB_CHANNEL2, ADMINS, APP_ID, API_HASH
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.errors import FloodWait
 from pyrogram import Client
 
-owner_client = Client("owner_session", api_id=API_ID, api_hash=API_HASH)
+owner_client = Client("owner_session", api_id=APP_ID, api_hash=API_HASH)
 
 async def check_join_requests(client, chat_id):
     try:
