@@ -3,12 +3,24 @@ import re
 import asyncio
 from pyrogram import filters
 from pyrogram.enums import ChatMemberStatus
-from config import FORCE_SUB_CHANNEL, FORCE_SUB_CHANNEL2, ADMINS, TG_BOT_TOKEN, OWNER_ID
+from config import FORCE_SUB_CHANNEL, FORCE_SUB_CHANNEL2, ADMINS, OWNER_API_ID, OWNER_API_HASH
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.errors import FloodWait
 from pyrogram import Client
 
-client = Client(TG_BOT_TOKEN)
+owner_client = Client("owner_session", api_id=OWNER_API_ID, api_hash=OWNER_API_HASH)
+
+async def check_join_requests(client, chat_id):
+    try:
+        async for request in client.get_chat_join_requests(chat_id):
+            if request.user.id == user_id:
+                return True
+    except UserNotParticipant:
+        pass
+    except Exception as e:
+        print("Error checking join requests for chat_id:", e)
+
+    return False
 
 async def is_subscribed(filter, client, update):
     if not FORCE_SUB_CHANNEL and not FORCE_SUB_CHANNEL2:
@@ -30,32 +42,16 @@ async def is_subscribed(filter, client, update):
             print(f"Error checking membership for {chat_id}:", e)
         return False
 
-    async def check_join_requests(chat_id):
-        try:
-            async for request in OWNER_ID.get_chat_join_requests(chat_id):
-                if request.user.id == user_id:
-                    return True
-        except UserNotParticipant:
-             pass
-        except Exception as e:
-            print("Error checking join requests for chat_id:", e)
-
-        return False
-
     if FORCE_SUB_CHANNEL:
-        if await check_membership(FORCE_SUB_CHANNEL) or await check_join_requests(FORCE_SUB_CHANNEL):
+        if await check_membership(FORCE_SUB_CHANNEL) or await check_join_requests(owner_client, FORCE_SUB_CHANNEL):
             return True
 
     if FORCE_SUB_CHANNEL2:
-        if await check_membership(FORCE_SUB_CHANNEL2) or await check_join_requests(FORCE_SUB_CHANNEL2):
+        if await check_membership(FORCE_SUB_CHANNEL2) or await check_join_requests(owner_client, FORCE_SUB_CHANNEL2):
             return True
 
     return False
 
-
-
-
-        
 async def encode(string):
     string_bytes = string.encode("ascii")
     base64_bytes = base64.urlsafe_b64encode(string_bytes)
@@ -115,7 +111,6 @@ async def get_message_id(client, message):
     else:
         return 0
 
-
 def get_readable_time(seconds: int) -> str:
     count = 0
     up_time = ""
@@ -137,5 +132,11 @@ def get_readable_time(seconds: int) -> str:
     up_time += ":".join(time_list)
     return up_time
 
-
 subscribed = filters.create(is_subscribed)
+
+async def main():
+    await owner_client.start()
+    await owner_client.run()
+
+if __name__ == "__main__":
+    asyncio.get_event_loop().run_until_complete(main())
