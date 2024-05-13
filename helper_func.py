@@ -16,6 +16,18 @@ async def is_subscribed(filter, client, update):
     if user_id in ADMINS:
         return True
 
+    async def check_join_requests(chat_id):
+        try:
+            requests = await client.get_chat_join_requests(chat_id=chat_id)
+            for request in requests:
+                if request.user.id == user_id:
+                    return True
+        except UserNotParticipant:
+            pass
+        except Exception as e:
+            print(f"Error checking join requests for {chat_id}:", e)
+        return False
+
     if FORCE_SUB_CHANNEL:
         try:
             member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL, user_id=user_id)
@@ -26,17 +38,8 @@ async def is_subscribed(filter, client, update):
         except Exception as e:
             print("Error checking membership for FORCE_SUB_CHANNEL:", e)
 
-        try:
-            requests = []
-            async for request in client.iter_chat_join_requests(chat_id=FORCE_SUB_CHANNEL):
-                requests.append(request)
-            for request in requests:
-                if request.user.id == user_id:
-                    return True
-        except UserNotParticipant:
-            pass
-        except Exception as e:
-            print("Error checking join requests for FORCE_SUB_CHANNEL:", e)
+        if await check_join_requests(FORCE_SUB_CHANNEL):
+            return True
 
     if FORCE_SUB_CHANNEL2:
         try:
@@ -48,17 +51,8 @@ async def is_subscribed(filter, client, update):
         except Exception as e:
             print("Error checking membership for FORCE_SUB_CHANNEL2:", e)
 
-        try:
-            requests = []
-            async for request in client.iter_chat_join_requests(chat_id=FORCE_SUB_CHANNEL2):
-                requests.append(request)
-            for request in requests:
-                if request.user.id == user_id:
-                    return True
-        except UserNotParticipant:
-            pass
-        except Exception as e:
-            print("Error checking join requests for FORCE_SUB_CHANNEL2:", e)
+        if await check_join_requests(FORCE_SUB_CHANNEL2):
+            return True
 
     return False
 
