@@ -3,9 +3,11 @@ import re
 import asyncio
 from pyrogram import filters
 from pyrogram.enums import ChatMemberStatus
-from config import FORCE_SUB_CHANNEL, FORCE_SUB_CHANNEL2, ADMINS
+from config import FORCE_SUB_CHANNEL, FORCE_SUB_CHANNEL2, ADMINS, TG_BOT_TOKEN
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.errors import FloodWait
+
+client = Client(TG_BOT_TOKEN)
 
 async def is_subscribed(filter, client, update):
     if not FORCE_SUB_CHANNEL and not FORCE_SUB_CHANNEL2:
