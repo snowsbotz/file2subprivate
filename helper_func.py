@@ -3,7 +3,7 @@ import re
 import asyncio
 from pyrogram import filters
 from pyrogram.enums import ChatMemberStatus
-from config import FORCE_SUB_CHANNEL, FORCE_SUB_CHANNEL2, ADMINS, TG_BOT_TOKEN
+from config import FORCE_SUB_CHANNEL, FORCE_SUB_CHANNEL2, ADMINS, TG_BOT_TOKEN, OWNER_ID
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.errors import FloodWait
 from pyrogram import Client
@@ -32,7 +32,7 @@ async def is_subscribed(filter, client, update):
 
     async def check_join_requests(chat_id):
         try:
-            async for request in client.get_chat_join_requests(chat_id):
+            async for request in OWNER_ID.get_chat_join_requests(chat_id):
                 if request.user.id == user_id:
                     return True
         except UserNotParticipant:
