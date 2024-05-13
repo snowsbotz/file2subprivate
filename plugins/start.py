@@ -146,9 +146,11 @@ REPLY_ERROR = """<code> ⏣ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ᴀꜱ ᴀ
 @Bot.on_message(filters.command("start") & filters.private)
 async def not_joined(client: Client, message: Message):
     try:
+        # Create invite links with the option to request to join
         invite_link1 = await client.create_chat_invite_link(chat_id=FORCE_SUB_CHANNEL, creates_join_request=True)
         invite_link2 = await client.create_chat_invite_link(chat_id=FORCE_SUB_CHANNEL2, creates_join_request=True)
 
+        # Define the buttons with the invite links
         buttons = [
             [
                 InlineKeyboardButton(text="◤ Join Channel 1 ◥", url=invite_link1.invite_link),
@@ -172,6 +174,7 @@ async def not_joined(client: Client, message: Message):
     except IndexError:
         pass
 
+    # Send the message with the invite links
     await message.reply(
         text=FORCE_MSG.format(
             first=message.from_user.first_name,
