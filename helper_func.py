@@ -6,6 +6,7 @@ from pyrogram.enums import ChatMemberStatus
 from config import FORCE_SUB_CHANNEL, FORCE_SUB_CHANNEL2, ADMINS, TG_BOT_TOKEN
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.errors import FloodWait
+from pyrogram import Client
 
 client = Client(TG_BOT_TOKEN)
 
