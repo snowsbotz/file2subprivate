@@ -50,7 +50,7 @@ async def is_subscribed(filter, client, update):
         for request in join_requests:
             if request.user.id == user_id:
                 return True
-            else
+            else:
                 return False
     except Exception as e:
         return False
