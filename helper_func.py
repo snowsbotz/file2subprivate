@@ -16,6 +16,17 @@ async def is_subscribed(filter, client, update):
     if user_id in ADMINS:
         return True
 
+    async def check_membership(chat_id):
+        try:
+            member = await client.get_chat_member(chat_id=chat_id, user_id=user_id)
+            if member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
+                return True
+        except UserNotParticipant:
+            pass
+        except Exception as e:
+            print(f"Error checking membership for {chat_id}:", e)
+        return False
+
     async def check_join_requests(chat_id):
         try:
             requests = await client.get_chat_join_requests(chat_id=chat_id)
@@ -29,32 +40,15 @@ async def is_subscribed(filter, client, update):
         return False
 
     if FORCE_SUB_CHANNEL:
-        try:
-            member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL, user_id=user_id)
-            if member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
-                return True
-        except UserNotParticipant:
-            pass
-        except Exception as e:
-            print("Error checking membership for FORCE_SUB_CHANNEL:", e)
-
-        if await check_join_requests(FORCE_SUB_CHANNEL):
+        if await check_membership(FORCE_SUB_CHANNEL) or await check_join_requests(FORCE_SUB_CHANNEL):
             return True
 
     if FORCE_SUB_CHANNEL2:
-        try:
-            member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL2, user_id=user_id)
-            if member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
-                return True
-        except UserNotParticipant:
-            pass
-        except Exception as e:
-            print("Error checking membership for FORCE_SUB_CHANNEL2:", e)
-
-        if await check_join_requests(FORCE_SUB_CHANNEL2):
+        if await check_membership(FORCE_SUB_CHANNEL2) or await check_join_requests(FORCE_SUB_CHANNEL2):
             return True
 
     return False
+
 
 
 
