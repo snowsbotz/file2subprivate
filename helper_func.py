@@ -7,6 +7,7 @@ from config import FORCE_SUB_CHANNEL, FORCE_SUB_CHANNEL2, ADMINS
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.errors import FloodWait
 
+
 async def is_subscribed(filter, client, update):
     if not FORCE_SUB_CHANNEL and not FORCE_SUB_CHANNEL2:
         return True
@@ -26,7 +27,7 @@ async def is_subscribed(filter, client, update):
         except Exception as e:
             print("Error checking membership for FORCE_SUB_CHANNEL:", e)
 
-    try:
+        try:
             async for request in client.get_chat_join_requests(chat_id=FORCE_SUB_CHANNEL):
                 if request.user.id == user_id:
                     return True
@@ -35,29 +36,27 @@ async def is_subscribed(filter, client, update):
         except Exception as e:
             print("Error checking join requests for FORCE_SUB_CHANNEL:", e)
 
-    if FORCE_SUB_CHANNEL:
+    if FORCE_SUB_CHANNEL2:
         try:
-            member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL, user_id=user_id)
+            member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL2, user_id=user_id)
             if member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
                 return True
         except UserNotParticipant:
             pass
         except Exception as e:
-            print("Error checking membership for FORCE_SUB_CHANNEL:", e)
+            print("Error checking membership for FORCE_SUB_CHANNEL2:", e)
 
         try:
-            async for request in client.get_chat_join_requests(chat_id=FORCE_SUB_CHANNEL):
+            async for request in client.get_chat_join_requests(chat_id=FORCE_SUB_CHANNEL2):
                 if request.user.id == user_id:
                     return True
         except UserNotParticipant:
             pass
         except Exception as e:
-            print("Error checking join requests for FORCE_SUB_CHANNEL:", e)
+            print("Error checking join requests for FORCE_SUB_CHANNEL2:", e)
 
     return False
 
-
-        
 async def encode(string):
     string_bytes = string.encode("ascii")
     base64_bytes = base64.urlsafe_b64encode(string_bytes)
