@@ -26,9 +26,8 @@ async def is_subscribed(filter, client, update):
         except Exception as e:
             print("Error checking membership for FORCE_SUB_CHANNEL:", e)
 
-        try:
-            join_requests = client.iter_chat_members(chat_id=FORCE_SUB_CHANNEL, filter="kicked")
-            async for request in join_requests:
+    try:
+            async for request in client.get_chat_join_requests(chat_id=FORCE_SUB_CHANNEL):
                 if request.user.id == user_id:
                     return True
         except UserNotParticipant:
@@ -36,26 +35,24 @@ async def is_subscribed(filter, client, update):
         except Exception as e:
             print("Error checking join requests for FORCE_SUB_CHANNEL:", e)
 
-    if FORCE_SUB_CHANNEL2:
+    if FORCE_SUB_CHANNEL:
         try:
-            member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL2, user_id=user_id)
+            member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL, user_id=user_id)
             if member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
                 return True
         except UserNotParticipant:
             pass
         except Exception as e:
-            print("Error checking membership for FORCE_SUB_CHANNEL2:", e)
+            print("Error checking membership for FORCE_SUB_CHANNEL:", e)
 
         try:
-            join_requests = client.iter_chat_members(chat_id=FORCE_SUB_CHANNEL2, filter="kicked")
-            async for request in join_requests:
+            async for request in client.get_chat_join_requests(chat_id=FORCE_SUB_CHANNEL):
                 if request.user.id == user_id:
                     return True
         except UserNotParticipant:
             pass
         except Exception as e:
-            print("Error checking join requests for FORCE_SUB_CHANNEL2:", e)
-            return False
+            print("Error checking join requests for FORCE_SUB_CHANNEL:", e)
 
     return False
 
