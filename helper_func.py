@@ -8,58 +8,54 @@ from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.errors import FloodWait
 
 async def is_subscribed(filter, client, update):
-    if not FORCE_SUB_CHANNEL:
+    if not FORCE_SUB_CHANNEL and not FORCE_SUB_CHANNEL2:
         return True
+
     user_id = update.from_user.id
+
     if user_id in ADMINS:
         return True
-    try:
-        member = await client.get_chat_member(chat_id = FORCE_SUB_CHANNEL, user_id = user_id)
-    except UserNotParticipant:
-        return False
 
-    if not member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
-        return False
-    else:
-        return True
+    if FORCE_SUB_CHANNEL:
+        try:
+            member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL, user_id=user_id)
+            if member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
+                return True
+        except UserNotParticipant:
+            pass
+        except Exception as e:
+            print("Error checking membership for FORCE_SUB_CHANNEL:", e)
 
-async def is_subscribed(filter, client, update):
-    if not FORCE_SUB_CHANNEL2:
-        return True
-    user_id = update.from_user.id
-    if user_id in ADMINS:
-        return True
-    try:
-        member = await client.get_chat_member(chat_id = FORCE_SUB_CHANNEL2, user_id = user_id)
-    except UserNotParticipant:
-        return False
+        try:
+            async for request in client.get_chat_join_requests(chat_id=FORCE_SUB_CHANNEL):
+                if request.user.id == user_id:
+                    return True
+        except UserNotParticipant:
+            pass
+        except Exception as e:
+            print("Error checking join requests for FORCE_SUB_CHANNEL:", e)
 
-    if not member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
-        return False
-    else:
-        return True
+    if FORCE_SUB_CHANNEL2:
+        try:
+            member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL2, user_id=user_id)
+            if member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
+                return True
+        except UserNotParticipant:
+            pass
+        except Exception as e:
+            print("Error checking membership for FORCE_SUB_CHANNEL2:", e)
 
-async def is_subscribed(filter, client, update):
-    if not FORCE_SUB_CHANNEL:
-        return True
-    if not FORCE_SUB_CHANNEL2:
-        return True
-    user_id = update.from_user.id
-    if user_id in ADMINS:
-        return True
-    try:
-        member = await client.get_chat_member(chat_id = FORCE_SUB_CHANNEL, user_id = user_id)
-    except UserNotParticipant:
-        return False
+        try:
+            async for request in client.get_chat_join_requests(chat_id=FORCE_SUB_CHANNEL2):
+                if request.user.id == user_id:
+                    return True
+        except UserNotParticipant:
+            pass
+        except Exception as e:
+            print("Error checking join requests for FORCE_SUB_CHANNEL2:", e)
 
-    if not member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
-        return False
-    try:
-        member = await client.get_chat_member(chat_id = FORCE_SUB_CHANNEL2, user_id = user_id)
-    except UserNotParticipant:
-        return False
-    else:
-        return True
+    return False
+
         
 async def encode(string):
     string_bytes = string.encode("ascii")
