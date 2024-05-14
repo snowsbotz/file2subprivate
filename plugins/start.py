@@ -81,8 +81,27 @@ async def start_command(client: Client, message: Message):
             if DISABLE_CHANNEL_BUTTON:
                 reply_markup = msg.reply_markup
             else:
-                reply_markup = None
-
+                reply_markup = InlineKeyboardMarkup(
+                    [
+                        [
+                        InlineKeyboardButton(
+                            text = '⚡️𝖩𝗈𝗂𝗇 𝖡𝖺𝖼𝗄𝗎𝗉『 @hindimedianews 』',
+                            url = f"https://t.me/+sq1Vvx5ZVNlhMDUx"
+                            )
+                        ],
+                        [
+                        InlineKeyboardButton(
+                            text = '🔰Join Our Movie Channel🔰',
+                            url = f"https://t.me/+EBLRLC0YhdUxOGU1"
+                            )
+                        ],
+                        [
+                        InlineKeyboardButton(
+                            text = '😁Join Our Meme Channel😁',
+                            url = f"https://t.me/+7ZO3NHXgylA3NzI1"
+                            )
+                        ]
+                    ]
             try:
                 await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
                 await asyncio.sleep(0.5)
