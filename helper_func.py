@@ -10,9 +10,13 @@ from pyrogram import Client
 
 owner_client = Client("owner_session", api_id=APP_ID, api_hash=API_HASH)
 
-async def check_join_requests(client, chat_id):
+async def main():
+    await owner_client.start()
+    await owner_client.run()
+    
+async def check_join_requests(owner_client,client, chat_id):
     try:
-        async for request in client.get_chat_join_requests(chat_id):
+        async for request in owner_client.get_chat_join_requests(chat_id):
             if request.user.id == user_id:
                 return True
     except UserNotParticipant:
@@ -134,9 +138,6 @@ def get_readable_time(seconds: int) -> str:
 
 subscribed = filters.create(is_subscribed)
 
-async def main():
-    await owner_client.start()
-    await owner_client.run()
 
 if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(main())
