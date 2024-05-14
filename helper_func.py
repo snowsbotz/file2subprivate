@@ -12,13 +12,13 @@ owner_client = Client("owner_session", api_id=APP_ID, api_hash=API_HASH)
 async def main():
     await owner_client.start()
     print("Owner client started.")
-
+    
     # Running the bot
     await asyncio.Event().wait()
 
 if __name__ == "__main__":
     asyncio.run(main())
-    
+
 async def check_join_requests(client, chat_id, user_id):
     try:
         async for request in client.get_chat_join_requests(chat_id):
@@ -63,6 +63,8 @@ async def is_subscribed(client, _, message):
 
     return False
 
+subscribed = filters.create(is_subscribed)
+
 async def encode(string):
     string_bytes = string.encode("ascii")
     base64_bytes = base64.urlsafe_b64encode(string_bytes)
@@ -72,7 +74,7 @@ async def encode(string):
 async def decode(base64_string):
     base64_string = base64_string.strip("=")
     base64_bytes = (base64_string + "=" * (-len(base64_string) % 4)).encode("ascii")
-    string_bytes = base64.urlsafe_b64decode(base64_bytes) 
+    string_bytes = base64.urlsafe_b64decode(base64_bytes)
     string = string_bytes.decode("ascii")
     return string
 
@@ -80,22 +82,22 @@ async def get_messages(client, message_ids):
     messages = []
     total_messages = 0
     while total_messages != len(message_ids):
-        temb_ids = message_ids[total_messages:total_messages+200]
+        temp_ids = message_ids[total_messages:total_messages+200]
         try:
             msgs = await client.get_messages(
                 chat_id=client.db_channel.id,
-                message_ids=temb_ids
+                message_ids=temp_ids
             )
         except FloodWait as e:
             await asyncio.sleep(e.x)
             msgs = await client.get_messages(
                 chat_id=client.db_channel.id,
-                message_ids=temb_ids
+                message_ids=temp_ids
             )
         except Exception as e:
             print(f"Error getting messages: {e}")
             break
-        total_messages += len(temb_ids)
+        total_messages += len(temp_ids)
         messages.extend(msgs)
     return messages
 
@@ -143,7 +145,3 @@ def get_readable_time(seconds: int) -> str:
     time_list.reverse()
     up_time += ":".join(time_list)
     return up_time
-
-subscribed = filters.create(is_subscribed)
-
-
