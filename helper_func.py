@@ -9,6 +9,16 @@ from config import FORCE_SUB_CHANNEL, FORCE_SUB_CHANNEL2, ADMINS, APP_ID, API_HA
 
 owner_client = Client("owner_session", api_id=APP_ID, api_hash=API_HASH)
 
+async def main():
+    await owner_client.start()
+    print("Owner client started.")
+
+    # Running the bot
+    await asyncio.Event().wait()
+
+if __name__ == "__main__":
+    asyncio.run(main())
+    
 async def check_join_requests(client, chat_id, user_id):
     try:
         async for request in client.get_chat_join_requests(chat_id):
@@ -136,12 +146,4 @@ def get_readable_time(seconds: int) -> str:
 
 subscribed = filters.create(is_subscribed)
 
-async def main():
-    await owner_client.start()
-    print("Owner client started.")
 
-    # Running the bot
-    await asyncio.Event().wait()
-
-if __name__ == "__main__":
-    asyncio.run(main())
