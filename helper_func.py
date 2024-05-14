@@ -14,9 +14,9 @@ async def main():
     await owner_client.start()
     await owner_client.run()
     
-async def check_join_requests(owner_client,client, chat_id):
+async def check_join_requests(client, chat_id):
     try:
-        async for request in owner_client.get_chat_join_requests(chat_id):
+        async for request in client.get_chat_join_requests(chat_id):
             if request.user.id == user_id:
                 return True
     except UserNotParticipant:
