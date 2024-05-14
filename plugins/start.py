@@ -72,40 +72,42 @@ async def start_command(client: Client, message: Message):
         await temp_msg.delete()
 
         for msg in messages:
+            if msg.document:
+                if bool(CUSTOM_CAPTION) & bool(msg.document):
+                    caption = CUSTOM_CAPTION.format(
+                        previouscaption="" if not msg.caption else msg.caption.html,
+                        filename=msg.document.file_name,
+                    )
+                else:
+                    caption = "" if not msg.caption else msg.caption.html
 
-            if bool(CUSTOM_CAPTION) & bool(msg.document):
-                caption = CUSTOM_CAPTION.format(
-                    previouscaption="" if not msg.caption else msg.caption.html,
-                    filename=msg.document.file_name,
-                )
-            else:
-                caption = "" if not msg.caption else msg.caption.html
+                # Define buttons for each message
+                buttons = InlineKeyboardMarkup([
+                    [InlineKeyboardButton("⚡️𝖩𝗈𝗂𝗇 𝖡𝖺𝖼𝗄𝗎𝗉『 @hindimedianews 』", url="https://t.me/+sq1Vvx5ZVNlhMDUx")],
+                    [InlineKeyboardButton("🔰Join Our Movie Channel🔰", url="https://t.me/+EBLRLC0YhdUxOGU1")],
+                    [InlineKeyboardButton("😁Join Our Meme Channel😁", url="https://t.me/+7ZO3NHXgylA3NzI1")]
+                ])
 
-            if DISABLE_CHANNEL_BUTTON:
-                reply_markup = msg.reply_markup
-            else:
-                reply_markup = None
-
-            try:
-                await msg.copy(
-                    chat_id=message.from_user.id,
-                    caption=caption,
-                    parse_mode=ParseMode.HTML,
-                    reply_markup=reply_markup,
-                    protect_content=PROTECT_CONTENT,
-                )
-                await asyncio.sleep(0.5)
-            except FloodWait as e:
-                await asyncio.sleep(e.x)
-                await msg.copy(
-                    chat_id=message.from_user.id,
-                    caption=caption,
-                    parse_mode=ParseMode.HTML,
-                    reply_markup=reply_markup,
-                    protect_content=PROTECT_CONTENT,
-                )
-            except:
-                pass
+                try:
+                    await msg.copy(
+                        chat_id=message.from_user.id,
+                        caption=caption,
+                        parse_mode=ParseMode.HTML,
+                        reply_markup=buttons,
+                        protect_content=PROTECT_CONTENT,
+                    )
+                    await asyncio.sleep(0.5)
+                except FloodWait as e:
+                    await asyncio.sleep(e.x)
+                    await msg.copy(
+                        chat_id=message.from_user.id,
+                        caption=caption,
+                        parse_mode=ParseMode.HTML,
+                        reply_markup=buttons,
+                        protect_content=PROTECT_CONTENT,
+                    )
+                except:
+                    pass
         return
     else:
         reply_markup = InlineKeyboardMarkup(
