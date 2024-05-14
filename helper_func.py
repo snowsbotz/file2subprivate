@@ -22,7 +22,18 @@ async def is_subscribed(filter, client, update):
 
     if member.status not in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER, ChatMemberStatus.RESTRICTED]:
         return False
-    return True
+    try:
+        join_requests = await client.get_chat_members(chat_id=FORCE_SUB_CHANNEL2, filter=ChatMembersFilter.JOIN_REQUESTS)
+    except Exception as e:
+        print(e)
+        return False
+    
+    # Check if the user is in the join request list
+    for request in join_requests:
+        if request.user.id == user_id:
+            return True
+    
+    return False
 
 async def is_subscribed(filter, client, update):
     if not FORCE_SUB_CHANNEL2:
@@ -37,7 +48,19 @@ async def is_subscribed(filter, client, update):
 
     if member.status not in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER, ChatMemberStatus.RESTRICTED]:
         return False
-    return True
+    
+    try:
+        join_requests = await client.get_chat_members(chat_id=FORCE_SUB_CHANNEL2, filter=ChatMembersFilter.JOIN_REQUESTS)
+    except Exception as e:
+        print(e)
+        return False
+    
+    # Check if the user is in the join request list
+    for request in join_requests:
+        if request.user.id == user_id:
+            return True
+    
+    return False
 
 async def is_subscribed(filter, client, update):
     if not FORCE_SUB_CHANNEL:
@@ -66,7 +89,18 @@ async def is_subscribed(filter, client, update):
     if member.status not in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER, ChatMemberStatus.RESTRICTED]:
         return False
 
-    return True
+    try:
+        join_requests = await client.get_chat_members(chat_id=FORCE_SUB_CHANNEL2, filter=ChatMembersFilter.JOIN_REQUESTS)
+    except Exception as e:
+        print(e)
+        return False
+    
+    # Check if the user is in the join request list
+    for request in join_requests:
+        if request.user.id == user_id:
+            return True
+    
+    return False
         
 async def encode(string):
     string_bytes = string.encode("ascii")
