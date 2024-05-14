@@ -111,8 +111,7 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⚡️ ᴄʟᴏsᴇ", callback_data="close"),
-                    InlineKeyboardButton("🍁 ꜱᴜᴘᴘᴏʀᴛ", url="https://t.me/teamuhd"),
+                    InlineKeyboardButton("⚡️ ᴄʟᴏsᴇ", callback_data="close")
                 ]
             ]
         )
@@ -145,53 +144,36 @@ REPLY_ERROR = """<code> ⏣ ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ᴀꜱ ᴀ
 
 @Bot.on_message(filters.command("start") & filters.private)
 async def not_joined(client: Client, message: Message):
-    try:
-        # Create invite links with the option to request to join
-        invite_link1 = await client.create_chat_invite_link(chat_id=FORCE_SUB_CHANNEL, creates_join_request=True)
-        invite_link2 = await client.create_chat_invite_link(chat_id=FORCE_SUB_CHANNEL2, creates_join_request=True)
-
-        # Define the buttons with the invite links
-        buttons = [
-            [
-                InlineKeyboardButton(text="◤ Join Channel 1 ◥", url=invite_link1.invite_link),
-                InlineKeyboardButton(text="◣ Join Channel 2 ◢", url=invite_link2.invite_link),
-            ]
+    buttons = [
+        [
+            InlineKeyboardButton(text="◤ Join Channel 1 ◥", url=client.invitelink),
+            InlineKeyboardButton(text="◣ Join Channel 2 ◢", url=client.invitelink2),
         ]
-    except Exception as e:
-        # Handle any errors that might occur during invite link creation
-        print("Error creating invite links:", e)
-        return
-
+    ]
     try:
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text="⌬ Try Again ⌬",
-                    url=f"https://t.me/{client.username}?start={message.command[1]}",
+                    text = 'Try Again',
+                    url = f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ]
         )
     except IndexError:
         pass
 
-    # Send the message with the invite links
     await message.reply(
-        text=FORCE_MSG.format(
-            first=message.from_user.first_name,
-            last=message.from_user.last_name,
-            username=(
-                None
-                if not message.from_user.username
-                else "@" + message.from_user.username
+        text = FORCE_MSG.format(
+                first = message.from_user.first_name,
+                last = message.from_user.last_name,
+                username = None if not message.from_user.username else '@' + message.from_user.username,
+                mention = message.from_user.mention,
+                id = message.from_user.id
             ),
-            mention=message.from_user.mention,
-            id=message.from_user.id,
-        ),
-        reply_markup=InlineKeyboardMarkup(buttons),
-        quote=True,
-        disable_web_page_preview=True,
+        reply_markup = InlineKeyboardMarkup(buttons),
+        quote = True,
+        disable_web_page_preview = True
     )
-
 
 @Bot.on_message(filters.command("users") & filters.private & filters.user(ADMINS))
 async def get_users(client: Bot, message: Message):
