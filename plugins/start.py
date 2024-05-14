@@ -114,7 +114,16 @@ async def start_command(client: Client, message: Message):
         return
     else:
         reply_markup = InlineKeyboardMarkup(
-            [
+            [    
+                [
+                    InlineKeyboardButton("⚡️𝖩𝗈𝗂𝗇 𝖡𝖺𝖼𝗄𝗎𝗉『 @hindimedianews 』",url = f"https://t.me/+sq1Vvx5ZVNlhMDUx")
+                ],
+                [
+                    InlineKeyboardButton("🔰Join Our Movie Channel🔰",url = f"https://t.me/+EBLRLC0YhdUxOGU1")
+                ],
+                [
+                    InlineKeyboardButton("😁Join Our Meme Channel😁", url = f"https://t.me/+7ZO3NHXgylA3NzI1")
+                ],
                 [
                     InlineKeyboardButton("⚡️ ᴄʟᴏsᴇ", callback_data="close")
                 ]
