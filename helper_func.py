@@ -20,11 +20,14 @@ async def check_join_requests(client, chat_id, user_id):
         print("Error checking join requests for chat_id:", e)
     return False
 
-async def is_subscribed(client, message, update):
+async def is_subscribed(client, _, message):
     if not FORCE_SUB_CHANNEL and not FORCE_SUB_CHANNEL2:
         return True
 
-    user_id = message.from_user.id
+    if hasattr(message, 'from_user') and message.from_user is not None:
+        user_id = message.from_user.id
+    else:
+        return False
 
     if user_id in ADMINS:
         return True
