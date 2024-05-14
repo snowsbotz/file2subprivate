@@ -1,4 +1,5 @@
-from bot import Bot, APP_ID, API_HASH
+from bot import Bot
+from config import APP_ID, API_HASH
 
 Bot().run()
 
