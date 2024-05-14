@@ -85,12 +85,6 @@ async def start_command(client: Client, message: Message):
                     [
                         [
                         InlineKeyboardButton(
-                            text = '⚡️𝖩𝗈𝗂𝗇 𝖡𝖺𝖼𝗄𝗎𝗉『 @hindimedianews 』',
-                            url = f"https://t.me/+sq1Vvx5ZVNlhMDUx"
-                            )
-                        ],
-                        [
-                        InlineKeyboardButton(
                             text = '🔰Join Our Movie Channel🔰',
                             url = f"https://t.me/+EBLRLC0YhdUxOGU1"
                             )
@@ -115,9 +109,6 @@ async def start_command(client: Client, message: Message):
     else:
         reply_markup = InlineKeyboardMarkup(
             [    
-                [
-                    InlineKeyboardButton("⚡️𝖩𝗈𝗂𝗇 𝖡𝖺𝖼𝗄𝗎𝗉『 @hindimedianews 』",url = f"https://t.me/+sq1Vvx5ZVNlhMDUx")
-                ],
                 [
                     InlineKeyboardButton("🔰Join Our Movie Channel🔰",url = f"https://t.me/+EBLRLC0YhdUxOGU1")
                 ],
