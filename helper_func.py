@@ -1,20 +1,15 @@
 import base64
 import re
 import asyncio
-from pyrogram import filters
+from pyrogram import filters, Client
 from pyrogram.enums import ChatMemberStatus
-from config import FORCE_SUB_CHANNEL, FORCE_SUB_CHANNEL2, ADMINS, APP_ID, API_HASH
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.errors import FloodWait
-from pyrogram import Client
+from config import FORCE_SUB_CHANNEL, FORCE_SUB_CHANNEL2, ADMINS, APP_ID, API_HASH
 
 owner_client = Client("owner_session", api_id=APP_ID, api_hash=API_HASH)
 
-async def main():
-    await owner_client.start()
-    await owner_client.run()
-    
-async def check_join_requests(client, chat_id):
+async def check_join_requests(client, chat_id, user_id):
     try:
         async for request in client.get_chat_join_requests(chat_id):
             if request.user.id == user_id:
@@ -23,10 +18,9 @@ async def check_join_requests(client, chat_id):
         pass
     except Exception as e:
         print("Error checking join requests for chat_id:", e)
-
     return False
 
-async def is_subscribed(filter, client, update):
+async def is_subscribed(client, update):
     if not FORCE_SUB_CHANNEL and not FORCE_SUB_CHANNEL2:
         return True
 
@@ -47,11 +41,11 @@ async def is_subscribed(filter, client, update):
         return False
 
     if FORCE_SUB_CHANNEL:
-        if await check_membership(FORCE_SUB_CHANNEL) or await check_join_requests(owner_client, FORCE_SUB_CHANNEL):
+        if await check_membership(FORCE_SUB_CHANNEL) or await check_join_requests(owner_client, FORCE_SUB_CHANNEL, user_id):
             return True
 
     if FORCE_SUB_CHANNEL2:
-        if await check_membership(FORCE_SUB_CHANNEL2) or await check_join_requests(owner_client, FORCE_SUB_CHANNEL2):
+        if await check_membership(FORCE_SUB_CHANNEL2) or await check_join_requests(owner_client, FORCE_SUB_CHANNEL2, user_id):
             return True
 
     return False
@@ -85,8 +79,9 @@ async def get_messages(client, message_ids):
                 chat_id=client.db_channel.id,
                 message_ids=temb_ids
             )
-        except:
-            pass
+        except Exception as e:
+            print(f"Error getting messages: {e}")
+            break
         total_messages += len(temb_ids)
         messages.extend(msgs)
     return messages
@@ -101,7 +96,7 @@ async def get_message_id(client, message):
         return 0
     elif message.text:
         pattern = "https://t.me/(?:c/)?(.*)/(\d+)"
-        matches = re.match(pattern,message.text)
+        matches = re.match(pattern, message.text)
         if not matches:
             return 0
         channel_id = matches.group(1)
@@ -138,6 +133,13 @@ def get_readable_time(seconds: int) -> str:
 
 subscribed = filters.create(is_subscribed)
 
+async def main():
+    await owner_client.start()
+    print("Owner client started.")
+
+    # Running the bot
+    while True:
+        await asyncio.sleep(1)
 
 if __name__ == "__main__":
-    asyncio.get_event_loop().run_until_complete(main())
+    asyncio.run(main())
