@@ -1,12 +1,43 @@
-
 import base64
 import re
 import asyncio
 from pyrogram import filters
-from pyrogram.enums import ChatMemberStatus, ChatMembersFilter
+from pyrogram.enums import ChatMemberStatus
 from config import FORCE_SUB_CHANNEL, FORCE_SUB_CHANNEL2, ADMINS
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.errors import FloodWait
+
+async def is_subscribed(filter, client, update):
+    if not FORCE_SUB_CHANNEL:
+        return True
+    user_id = update.from_user.id
+    if user_id in ADMINS:
+        return True
+    try:
+        member = await client.get_chat_member(chat_id = FORCE_SUB_CHANNEL, user_id = user_id)
+    except UserNotParticipant:
+        return False
+
+    if not member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
+        return False
+    else:
+        return True
+
+async def is_subscribed(filter, client, update):
+    if not FORCE_SUB_CHANNEL2:
+        return True
+    user_id = update.from_user.id
+    if user_id in ADMINS:
+        return True
+    try:
+        member = await client.get_chat_member(chat_id = FORCE_SUB_CHANNEL2, user_id = user_id)
+    except UserNotParticipant:
+        return False
+
+    if not member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
+        return False
+    else:
+        return True
 
 async def is_subscribed(filter, client, update):
     if not FORCE_SUB_CHANNEL:
@@ -16,43 +47,19 @@ async def is_subscribed(filter, client, update):
     user_id = update.from_user.id
     if user_id in ADMINS:
         return True
-
     try:
-        member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL, user_id=user_id)
+        member = await client.get_chat_member(chat_id = FORCE_SUB_CHANNEL, user_id = user_id)
     except UserNotParticipant:
         return False
 
-    if member.status in [ChatMemberStatus.RESTRICTED, ChatMemberStatus.KICKED]:
+    if not member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
         return False
-
     try:
-        member2 = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL2, user_id=user_id)
+        member = await client.get_chat_member(chat_id = FORCE_SUB_CHANNEL2, user_id = user_id)
     except UserNotParticipant:
         return False
-
-    if member2.status in [ChatMemberStatus.RESTRICTED, ChatMemberStatus.KICKED]:
-        return False
-
-    if member.status == ChatMemberStatus.MEMBER and member2.status == ChatMemberStatus.MEMBER:
+    else:
         return True
-
-    # Check for pending join requests
-    try:
-        join_request = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL, user_id=user_id)
-        if join_request.status == ChatMemberStatus.RESTRICTED:
-            return False
-    except UserNotParticipant:
-        pass
-
-    try:
-        join_request2 = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL2, user_id=user_id)
-        if join_request2.status == ChatMemberStatus.RESTRICTED:
-            return False
-    except UserNotParticipant:
-        pass
-
-    return True
-
         
 async def encode(string):
     string_bytes = string.encode("ascii")
