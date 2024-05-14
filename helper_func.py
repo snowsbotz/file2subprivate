@@ -1,4 +1,3 @@
-#(©)CodeFlix_Bots
 
 import base64
 import re
@@ -20,20 +19,10 @@ async def is_subscribed(filter, client, update):
     except UserNotParticipant:
         return False
 
-    if member.status not in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER, ChatMemberStatus.RESTRICTED]:
+    if not member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
         return False
-    try:
-        join_requests = await client.get_chat_members(chat_id=FORCE_SUB_CHANNEL2, filter=ChatMembersFilter.JOIN_REQUESTS)
-    except Exception as e:
-        print(e)
-        return False
-    
-    # Check if the user is in the join request list
-    for request in join_requests:
-        if request.user.id == user_id:
-            return True
-    
-    return False
+    else:
+        return True
 
 async def is_subscribed(filter, client, update):
     if not FORCE_SUB_CHANNEL2:
@@ -42,65 +31,36 @@ async def is_subscribed(filter, client, update):
     if user_id in ADMINS:
         return True
     try:
-        member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL2, user_id=user_id)
+        member = await client.get_chat_member(chat_id = FORCE_SUB_CHANNEL2, user_id = user_id)
     except UserNotParticipant:
         return False
 
-    if member.status not in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER, ChatMemberStatus.RESTRICTED]:
+    if not member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
         return False
-    
-    try:
-        join_requests = await client.get_chat_members(chat_id=FORCE_SUB_CHANNEL2, filter=ChatMembersFilter.JOIN_REQUESTS)
-    except Exception as e:
-        print(e)
-        return False
-    
-    # Check if the user is in the join request list
-    for request in join_requests:
-        if request.user.id == user_id:
-            return True
-    
-    return False
+    else:
+        return True
 
 async def is_subscribed(filter, client, update):
     if not FORCE_SUB_CHANNEL:
         return True
     if not FORCE_SUB_CHANNEL2:
         return True
-    
     user_id = update.from_user.id
-    
     if user_id in ADMINS:
         return True
-    
     try:
-        member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL, user_id=user_id)
+        member = await client.get_chat_member(chat_id = FORCE_SUB_CHANNEL, user_id = user_id)
     except UserNotParticipant:
         return False
 
-    if member.status not in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER, ChatMemberStatus.RESTRICTED]:
+    if not member.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER]:
         return False
-    
     try:
-        member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL2, user_id=user_id)
+        member = await client.get_chat_member(chat_id = FORCE_SUB_CHANNEL2, user_id = user_id)
     except UserNotParticipant:
         return False
-
-    if member.status not in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.MEMBER, ChatMemberStatus.RESTRICTED]:
-        return False
-
-    try:
-        join_requests = await client.get_chat_members(chat_id=FORCE_SUB_CHANNEL2, filter=ChatMembersFilter.JOIN_REQUESTS)
-    except Exception as e:
-        print(e)
-        return False
-    
-    # Check if the user is in the join request list
-    for request in join_requests:
-        if request.user.id == user_id:
-            return True
-    
-    return False
+    else:
+        return True
         
 async def encode(string):
     string_bytes = string.encode("ascii")
