@@ -20,11 +20,11 @@ async def check_join_requests(client, chat_id, user_id):
         print("Error checking join requests for chat_id:", e)
     return False
 
-async def is_subscribed(client, update):
+async def is_subscribed(client, message, update):
     if not FORCE_SUB_CHANNEL and not FORCE_SUB_CHANNEL2:
         return True
 
-    user_id = update.from_user.id
+    user_id = message.from_user.id
 
     if user_id in ADMINS:
         return True
@@ -138,8 +138,7 @@ async def main():
     print("Owner client started.")
 
     # Running the bot
-    while True:
-        await asyncio.sleep(1)
+    await asyncio.Event().wait()
 
 if __name__ == "__main__":
     asyncio.run(main())
