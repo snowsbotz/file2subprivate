@@ -86,7 +86,7 @@ async def start_command(client: Client, message: Message):
                         [
                         InlineKeyboardButton(
                             text = '🔰Join Our Movie Channel🔰',
-                            url = f"https://t.me/+EBLRLC0YhdUxOGU1"
+                            url = f"https://t.me/addlist/-p47eRxmfYs5YTA9"
                             )
                         ],
                         [
@@ -110,7 +110,7 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [    
                 [
-                    InlineKeyboardButton("🔰Join Our Movie Channel🔰",url = f"https://t.me/+EBLRLC0YhdUxOGU1")
+                    InlineKeyboardButton("🔰Join Our Movie Channel🔰",url = f"https://t.me/addlist/-p47eRxmfYs5YTA9")
                 ],
                 [
                     InlineKeyboardButton("😁Join Our Meme Channel😁", url = f"https://t.me/+7ZO3NHXgylA3NzI1")
