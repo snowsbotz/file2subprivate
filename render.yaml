@@ -5,7 +5,7 @@ services:
     env: python
     buildCommand: pip3 install -r requirements.txt
     startCommand: python3 main.py
-    repo: https://github.com/shanclient/filestore.git     
+    repo: https://github.com/snowsbotz/file2subprivate  
     branch: main
     envVars:
       - key: TG_BOT_TOKEN
